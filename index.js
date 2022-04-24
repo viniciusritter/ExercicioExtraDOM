@@ -17,13 +17,11 @@ const imageArray = [
 ];
 
 //var numberIndex = Math.floor(Math.random() * imageArray.length);
-const container = document.querySelector('.container');
+const imagens = document.querySelector('.imagens');
 
 function getRandomNr(){
     return Math.floor(Math.random() * imageArray.length);
 }
-
-
 
 function loadImages(numImages = 15)
 {
@@ -31,7 +29,7 @@ function loadImages(numImages = 15)
     while (i < numImages){
         const img = document.createElement('img');
         img.src = `./imagens/${imageArray[getRandomNr()]}`;
-        container.appendChild(img);
+        imagens.appendChild(img);
         i++
     }   
       
